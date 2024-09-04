@@ -1,7 +1,7 @@
 public class Factorial {
     public static void main(String[] args) {
         int k =4;
-        int [] memo = new int[k+1];
+       // int [] memo = new int[k+1];
        // System.out.println(factorial(k,memo));
         System.out.println(factByDP(k));
     }

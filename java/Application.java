@@ -2,8 +2,9 @@ import java.util.Arrays;
 
 public class Application {
     public static void main(String[] args) {
-        int[] data = { 8, 7, 2, 1, 0, 9, 6 };
-
+        int[] data = { 1, 2, 0, 3, 4, 0, 5, 6 };
+        
+        System.out.println(Arrays.toString(doubleTheZero(data)));
 /*
 //        KthMax.smallest(data);
 //        KthMax.secondSmallest(data);
@@ -20,11 +21,24 @@ public class Application {
 //
         System.out.println("Sorted Array in Ascending Order: ");
         System.out.println(Arrays.toString(data));*/
-        BinaryTree tree = new BinaryTree();
-        TreeNode root = tree.makeTree();
-        System.out.println(tree.inOrderTraversal(root));
-        System.out.println(tree.preorderTraversal(root));
-        System.out.println(tree.postOrderTraversal(root));
+        //BinaryTree tree = new BinaryTree();
+        //TreeNode root = tree.makeTree();
+        //System.out.println(tree.inOrderTraversal(root));
+       // System.out.println(tree.preorderTraversal(root));
+       // System.out.println(tree.postOrderTraversal(root));
+    }
+    private static int[] doubleTheZero(int[] data) {
+       int cptr = 0, dptr = 0;
+       int [] copy = new int[data.length];
+       while (cptr < data.length){
+        copy[cptr] = data[dptr];
+        if(data[dptr] == 0){
+           copy[++cptr] = data[dptr];
+        }
+            cptr++;
+            dptr++;
+       }
+       return copy;
     }
     static void insertionSort(int[] arr){
         for(int i =1; i< arr.length; i++){

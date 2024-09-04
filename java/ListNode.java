@@ -46,44 +46,5 @@ public class ListNode {
 
         return merge(left, right);
     }
-    /*
-    The below shuffleList method does uniform shuffling of LinkedList,
-    The approach is to find the half of linked-list and the appending them one each after each
-    append they are role-reversed as done in interleave method.
-     */
-    void shuffleList(ListNode head){
-         if(head == null) return;
-         ListNode half = splitAtHalf(head);
-         interleave(head, half);
-         head = half;
-    }
-    private ListNode splitAtHalf(ListNode head) {
-        ListNode twiceFast = head;
-        while(twiceFast.next.next != null){
-            twiceFast = twiceFast.next.next;
-            head = head.next;
-        }
-        ListNode result = head.next;
-        head.next = null;
-        return result;
-    }
-
-    private void interleave(ListNode first, ListNode second) {
-         ListNode tail = null;
-         recInterleave(first, second, tail);
-    }
-
-    private ListNode recInterleave(ListNode first, ListNode second, ListNode tail) {
-         if(second == null) return null;
-         if(tail == null) tail = second;
-         else {
-             tail.next = second;
-             tail = second;
-         }
-         second.next = recInterleave(second.next, first, tail);
-         return second;
-    }
-
-
 }
 
