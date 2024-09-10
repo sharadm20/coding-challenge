@@ -1,4 +1,4 @@
-package java.matrices;
+package matrices;
 
 import java.util.*;
 
@@ -33,7 +33,7 @@ class Pair{
     }
 }
 
-private List<List<Integer>> minDistance(List<List<Integer>> mat) {    
+private static List<List<Integer>> minDistance(List<List<Integer>> mat) {    
     int m = mat.size();
     int n = mat.get(0).size();
     List<List<Integer>> dist = new ArrayList<>();
