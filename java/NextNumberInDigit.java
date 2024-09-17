@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 
@@ -9,12 +8,17 @@ import java.util.Scanner;
 * */
 public class NextNumberInDigit {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        // Create a Scanner object
-        System.out.println("Input number must be withing int length");
+        try (Scanner sc = new Scanner(System.in)) {
+            // Create a Scanner object
+            System.out.println("Input number must be withing int length");
 
-        int n = sc.nextInt();
-        System.out.println(bruteForceMethod(n));
+            int n = sc.nextInt();
+            System.out.println(bruteForceMethod(n));
+            sc.close();
+        }catch(Exception e){
+
+        }
+      
     }
 
     static int bruteForceMethod(int n) {
