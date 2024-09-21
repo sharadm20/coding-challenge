@@ -1,4 +1,4 @@
-package arrays;
+package strings;
 
 public class AddAlternate {
     public String addAlternate(String word1, String word2) {
