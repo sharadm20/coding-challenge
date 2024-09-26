@@ -1,3 +1,4 @@
+package excercise;
 public class DeathNoteDecoder {
     public static int numDecodings(String s) {
         if (s == null || s.length() == 0) {

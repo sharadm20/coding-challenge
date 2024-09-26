@@ -1,3 +1,4 @@
+package excercise;
 public class CustomFunctionInterface {
         public static void main(String args[]) {
         CustomFunctionalInterface test2 = (int a, int b) -> a*b;

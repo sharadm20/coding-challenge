@@ -1,3 +1,4 @@
+package excercise;
 public class MinMoves {
     public static int minMoves(int n, String[] blocks) {
         if (n == 0) {

@@ -1,7 +1,5 @@
 package strings;
 
-import java.util.*;
-
 // two pointer, dynamic programming
 public class Substring {
     public static void main(String[] args) {
