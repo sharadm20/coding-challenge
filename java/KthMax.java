@@ -2,6 +2,10 @@ import java.util.Collections;
 import java.util.PriorityQueue;
 
 public class KthMax {
+    public static void main(String[] args) {
+        int[] input = {1,1,35,35,5,34};
+        System.out.println(findKthElement(input, 2));
+    }
     static int findKthSmallestElement(int[] arrayList, int k){
         PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
       //  int result = 0;
