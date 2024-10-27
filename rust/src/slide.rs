@@ -106,7 +106,8 @@ pub fn is_valid_sudoku_sec(board: Vec<Vec<char>>) -> bool {
                       boxs[current_cell_index][current_value] = 1;
                   }
               }
-          } 
+          }
+
 
           if ((x + 1) % 3 == 0) {
               boxs = [[0; 9]; 3];

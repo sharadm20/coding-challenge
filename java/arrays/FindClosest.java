@@ -1,7 +1,7 @@
 package arrays;
 
 import java.util.Arrays;
-
+//find closest to zero
 public class FindClosest {
     public int findClosestNumber(int[] nums) {
         int ans = 0;

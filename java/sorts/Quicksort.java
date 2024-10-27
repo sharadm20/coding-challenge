@@ -1,25 +1,32 @@
-public class Quicksort {
-    static void sort(int[] arr, int low, int high){
+package sorts;
+
+public class Quicksort implements Sort {
+    Quicksort(){
+
+    }
+     void sort(int[] arr, int low, int high){
         if(low < high){
             int pivot = partition(arr, low, high);
             sort(arr, low, pivot - 1);
             sort(arr, pivot +1, high);
         }
     }
-    static int partition(int[] arr, int low, int high){
+     int partition(int[] arr, int low, int high){
         int pivot = arr[high];
         int i = low - 1;
         for(int j  = low; j< high; j++){
             if(arr[j]<=pivot) {
                 i++;
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
+                swap(arr, i, j);
             }
         }
-        int temp = arr[i+1];
-        arr[i+1] = arr[high];
-        arr[high] = temp;
+        swap(arr, i + 1, high);
         return i + 1;
     }
+
+    @Override
+    public void sort(int[] array) {
+        sort(array, 0, array.length - 1);
+    }
+
 }

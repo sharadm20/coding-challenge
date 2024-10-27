@@ -1,3 +1,5 @@
+package arrays;
+
 public class SortRotatedArray {
     public int search(int[] nums, int target)
     {
