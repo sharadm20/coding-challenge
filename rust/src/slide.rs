@@ -171,3 +171,16 @@ pub fn spiral_order(matrix: Vec<Vec<i32>>) -> Vec<i32> {
   }
   ans
 }
+pub fn merge(intervals : Vec<Vec<i32>) -> Vec<Vec<i32>>{
+    let mut ans :Vec<Vec<i32>> = Vec::new();
+    let mut intervals = intervals;
+    intervals.sort();
+    for interval in intervals{
+        if(ans.is_empty() || ans.last()[1] < interval[0] {
+            ans.add(interval);
+         }else {
+             ans.last_mut().unwrap()[1] = ans.last_mut().unwrap()[1].max(interval[1]);
+             }
+        }
+    ans
+ }
